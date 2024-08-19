@@ -3728,6 +3728,9 @@ MonoBehaviour:
   bestScore: 0
   canMove: 0
   isGameOver: 0
+  toSave: 0
+  ballsList: []
+  smoothFactor: 100
   ballPrefab: {fileID: 4693447326750611914, guid: a0b8e810b8e63ac4596f4f0b8e4f72d3, type: 3}
   ballWithTrajectory: {fileID: 523245671}
   trajectoryBalls: {fileID: 1306501950}

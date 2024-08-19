@@ -37,4 +37,9 @@ public class Ball : MonoBehaviour
         makeTransition = true;
         nextStartPos = Pos;
     }
+    public void UnsetTransition()
+    {
+        makeTransition = false;
+        Rb.velocity = Vector2.zero;
+    }
 }

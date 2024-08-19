@@ -22,8 +22,10 @@ public class GameOverDetector : MonoBehaviour
         GameManager.instance.isGameOver = true;
         GameManager.instance.GameOverUI.SetActive(true);
         GameManager.instance.ballCountUI.SetActive(false);
+        StartCoroutine(GameManager.instance.DestroyAllBalls());
         StartCoroutine(DestroyAllBlocks());
         StartCoroutine(DestroyAllCollectables());
+        
     }
 
     IEnumerator DestroyAllBlocks()

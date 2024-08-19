@@ -8,5 +8,6 @@ public class BallPowerUp : MonoBehaviour
     {
         Destroy(gameObject,0f);
         GameManager.instance.ballCount++;
+
     }
 }

@@ -31,15 +31,17 @@ public class LowerBound : MonoBehaviour
         if (collidedBalls == ballsToCollide)
         {
             collidedBalls = 0;
+            StartCoroutine(GameManager.instance.AddBall(GameManager.instance.ballCount - ballsToCollide,startPos));
             UpdateBallCount();
             GameManager.instance.SetBallCountUI(ballsToCollide);
             GameManager.instance.currentScore++;
             GameManager.instance.GenerateNextRow();
             GameManager.instance.SpawnNextRowGameObjects();
             GameManager.instance.ballCountUI.SetActive(true);
+            GameManager.instance.toSave = true;
         }
         collision.gameObject.GetComponent<Ball>().SetTransition(GameManager.instance.ballUIPosition.transform.position);
-        Destroy(collision.gameObject, 0.6f);
+        //Destroy(collision.gameObject, 0.6f);
     }
 
     public void UpdateBallCount()
